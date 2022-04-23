@@ -105,8 +105,8 @@ const Post = ({ post, setCurrentId }) => {
           </div>
         )}
         <div className={classes.details}>
-          <Typography variant="body2" color="textSecondary">
-            {post.tags.map((tag) => `#${tag} `)}
+          <Typography variant="body2" style={{color:"#3f51b594"}}>
+            {post.tags.map((tag) => `#${tag.trim()} `)}
           </Typography>
         </div>
         <Typography className={classes.title} variant="h5" gutterBottom>
@@ -114,9 +114,10 @@ const Post = ({ post, setCurrentId }) => {
         </Typography>
         <CardContent>
           <Typography
+            style={{color:"#3f51b594"}}
             variant="body2"
-            color="textSecondary"
             component="p"
+            className="wordBreak"
             gutterBottom
           >
             {post.message}

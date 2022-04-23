@@ -8,7 +8,9 @@ import Home from "./components/Home/Home";
 import Auth from "./components/Auth/Auth";
 import PostDetails from "./components/PostDetails/PostDetails";
 import CreatorOrTag from "./components/CreatorOrTag/CreatorOrTag";
-
+import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact"
 
 
 const App = () => {
@@ -20,11 +22,14 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={()=> <Redirect to="/posts" />} />
           <Route path="/posts" exact component={Home} /> 
+          <Route path="/about" exact component={About} /> 
+          <Route path="/contact" exact component={Contact} /> 
           <Route path="/posts/search" exact component={Home} /> 
           <Route path="/posts/:id" exact component={PostDetails} /> 
           <Route path={['/creators/:name', '/tags/:name']} exact component={CreatorOrTag} /> 
           <Route path="/auth" exact component={()=> (!user ? <Auth /> : <Redirect to="/posts" />)} />
         </Switch>
+        <Footer />
       </Container>
     </BrowserRouter>
   );

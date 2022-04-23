@@ -27,4 +27,12 @@ export default makeStyles((theme) => ({
   googleButton: {
     marginBottom: theme.spacing(2),
   },
+  errMsg: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: theme.spacing(2),
+    backgroundColor: 'red',
+    color: '#fff',
+  }
 }));

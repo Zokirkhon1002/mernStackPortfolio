@@ -16,7 +16,7 @@ import Icon from "./Icon";
 import { useDispatch } from 'react-redux';
 import { AUTH } from "../../constants/actionTypes";
 import { useHistory } from "react-router-dom";
-import { signin, signup } from "../../actions/auth"
+import { signin, signup } from "../../actions/auth";
 
 
 const initialState = {
@@ -31,6 +31,7 @@ const initialState = {
 
 const Auth = () => {
   const classes = useStyles();
+  const [errMsg,setErrMsg] = useState("")
   const [showPassword, setShowPassword] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
   const [formData, setFormData] = useState(initialState)
@@ -72,12 +73,14 @@ const Auth = () => {
     try {
       dispatch({type: AUTH, data: {result, token}})
       history.push("/")
+      setErrMsg("")
     } catch (err) {
       console.log(err)
     }
   };
 
   const handleGoogleFailure = (err) => {
+    setErrMsg("Google Sign In was unsuccessfully. Try Again Later");
     console.log("Google Sign In was unsuccessfully. Try Again Later");
     console.log(err);
   };
@@ -91,6 +94,9 @@ const Auth = () => {
         <Typography variant="h5">Sign {isSignUp ? "Up" : "In"}</Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
+            {!!errMsg.length && <Paper className={classes.errMsg}  elevation={3}>
+            {errMsg}
+            </Paper>}
             {isSignUp && (
               <>
                 <Input

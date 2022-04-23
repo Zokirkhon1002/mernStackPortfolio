@@ -58,15 +58,28 @@ const PostDetails = () => {
             {post.tags.map((tag, idx) => (
               <Link
                 key={idx}
-                to={`/tags/${tag}`}
+                to={`/tags/${tag.trim()}`}
                 style={{ textDecoration: "none", color: "#3f51b5" }}
               >
-                {` #${tag} `}
+                {` #${tag.trim()} `}
               </Link>
             ))}
           </Typography>
-          <Typography gutterBottom variant="body1" component="p">
-            {post.message}
+          <Typography className="wordBreak" gutterBottom variant="body1">
+            {post.message.split("\n").map((i, index) =>
+              i.startsWith("https:") ? (
+                <a
+                  key={index}
+                  target="_blank"
+                  href={i}
+                  style={{ textDecoration: "none", color: "#3f51b5" }}
+                >
+                  {` ${i} `}
+                </a>
+              ) : (
+                <div>{i}</div>
+              )
+            )}
           </Typography>
           <Typography variant="h6">
             Created by:
@@ -93,7 +106,7 @@ const PostDetails = () => {
             className={classes.media}
             src={
               post.selectedFile ||
-              "https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png"
+              "https://cdn.theculturetrip.com/wp-content/uploads/2021/04/dnce6n-e1618929428972.jpg"
             }
             alt={post.title}
           />
@@ -101,7 +114,7 @@ const PostDetails = () => {
       </div>
       {!!recommendedPosts.length && (
         <div className={classes.section}>
-          <Typography style={{marginTop: '20px'}} gutterBottom variant="h5">
+          <Typography style={{ marginTop: "20px" }} gutterBottom variant="h5">
             You might also like:
           </Typography>
           <Divider />
@@ -113,19 +126,19 @@ const PostDetails = () => {
                   onClick={() => openPost(_id)}
                   key={_id}
                 >
-                  <Typography gutterBottom variant="h6">
+                  <Typography style={{color: '#3f51b5', fontWeight: 'bold'}} gutterBottom variant="h6">
                     {title}
                   </Typography>
-                  <Typography gutterBottom variant="subtitle2">
+                  <Typography style={{color: '#3f51b5', fontWeight: 'bold'}} gutterBottom variant="subtitle2">
                     {name}
                   </Typography>
-                  <Typography gutterBottom variant="subtitle2">
+                  <Typography style={{color:"#3f51b594"}} className="wordBreak" gutterBottom variant="subtitle2">
                     {message}
                   </Typography>
-                  <Typography gutterBottom variant="subtitle1">
+                  <Typography style={{color: '#3f51b5', fontWeight: 'bold'}} gutterBottom variant="subtitle1">
                     Likes: {likes.length}
                   </Typography>
-                  <img src={selectedFile} width="200px" alt={title} />
+                  <img src={selectedFile || "https://cdn.theculturetrip.com/wp-content/uploads/2021/04/dnce6n-e1618929428972.jpg"} width="200px" alt={title} />
                 </div>
               )
             )}
