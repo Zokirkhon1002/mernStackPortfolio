@@ -11,6 +11,7 @@ import CreatorOrTag from "./components/CreatorOrTag/CreatorOrTag";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact"
+import Help from "./components/Help/Help"
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/" exact component={()=> <Redirect to="/posts" />} />
           <Route path="/posts" exact component={Home} /> 
           <Route path="/about" exact component={About} /> 
+          <Route path="/help" exact component={Help} /> 
           <Route path="/contact" exact component={Contact} /> 
           <Route path="/posts/search" exact component={Home} /> 
           <Route path="/posts/:id" exact component={PostDetails} /> 
