@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { AppBar, Avatar, Button, Toolbar, Typography } from "@material-ui/core";
 import useStyles from "./styles";
-import memories from "../../images/memories.png";
+import logo512 from "../../images/logo512.png";
 import { useDispatch } from "react-redux";
 import { LOGOUT } from "../../constants/actionTypes";
 import decode from "jwt-decode";
@@ -52,9 +52,9 @@ const Navbar = () => {
           variant="h2"
           align="center"
         >
-          Social Media Posts
+          Social Posts
         </Typography>
-        <img className={classes.image} src={memories} alt="icon" height="60" />
+        <img className={classes.image} src={logo512} alt="icon" height="60" />
       </div>
       <Toolbar className={classes.toolbar}>
         {user ? (

@@ -16,7 +16,7 @@ const Footer = () => {
       <footer>
         <div className="footer_container">
           <div className="sec aboutus">
-            <h2>About me</h2>
+            <h2>About Me</h2>
             <p>
               My name is Zokirkhon and I'm 23 years old. I've learned html, css,
               sass, bootstrap, JavaScript, ReactJS, Redux toolkit, NodeJs and
@@ -85,15 +85,16 @@ const Footer = () => {
           </div>
           <div className="sec contact">
             <h2>Contact Info</h2>
+            <div className="divForMap">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.3456064315019!2d127.70578671713633!3d34.77114675684713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356ddf43a724f847%3A0xdd499ca2846a04cd!2zKOycoO2VnCnssq3shpTqsbTquLA!5e0!3m2!1suz!2skr!4v1650685608704!5m2!1suz!2skr"
-              width="400"
-              height="250"
+              className="info map"
               style={{border: 'none', margin: '10px'}}
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
+            </div>
             <ul className="info">
               <li>
                 <span>
