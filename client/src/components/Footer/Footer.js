@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import "./Footer.css";
 import { FaFacebookF } from "react-icons/fa";
@@ -9,8 +11,10 @@ import {
 import { BsInstagram, BsTelegram, BsGithub } from "react-icons/bs";
 import { BiMap, BiPhoneCall } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
   return (
     <div id="footer_body" className="footer_body">
       <footer>
@@ -26,38 +30,38 @@ const Footer = () => {
             </p>
             <ul className="sci">
               <li>
-                <a target="_blank" href="https://www.facebook.com/Zokirkhan102">
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/Zokirkhan102">
                   <FaFacebookF className="FaFacebookF" />
                 </a>
               </li>
               <li>
-                <a target="_blank" href="https://twitter.com/Zokirkhan1">
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/Zokirkhan1">
                   <AiOutlineTwitter className="AiOutlineTwitter" />
                 </a>
               </li>
               <li>
                 <a
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   href="https://www.instagram.com/zokirkhan1002/"
                 >
                   <BsInstagram className="BsInstagram" />
                 </a>
               </li>
               <li>
-                <a target="_blank" href="https://t.me/Zokirkhann1002">
+                <a target="_blank" rel="noreferrer" href="https://t.me/Zokirkhann1002">
                   <BsTelegram className="BsTelegram" />
                 </a>
               </li>
               <li>
                 <a
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   href="https://www.linkedin.com/in/zokirkhon-kotibkhonov-2997b1202/"
                 >
                   <AiFillLinkedin className="AiFillLinkedin" />
                 </a>
               </li>
               <li>
-                <a target="_blank" href="https://github.com/Zokirkhon1002">
+                <a target="_blank" rel="noreferrer" href="https://github.com/Zokirkhon1002">
                   <BsGithub className="BsGithub" />
                 </a>
               </li>
@@ -70,10 +74,14 @@ const Footer = () => {
                 <Link to="about">About</Link>
               </li>
               <li>
-                <a href="/">Home</a>
+                {
+                  (location.pathname === '/posts') ? (<Link to="/" onClick={() => window.scrollTo(0,0)} >Home</Link>) : (<Link to="/">Home</Link>)
+                }
               </li>
               <li>
-                <a href="/">Create a Post</a>
+              {
+                  (location.pathname === '/posts') ? (<Link to="/" onClick={() => window.scrollTo(0,0)} >Create a Post</Link>) : (<Link to="/">Create a Post</Link>)
+                }
               </li>
               <li>
                 <Link to="/help">Help</Link>
@@ -100,7 +108,7 @@ const Footer = () => {
                 <span>
                   <BiMap />
                 </span>
-                <span><a target="_blank" href="http://kko.to/NLtBiO4yT">전남 여수시 미평동 700-4 301호. (만성로95)</a></span>
+                <span><a target="_blank" rel="noreferrer" href="http://kko.to/NLtBiO4yT">전남 여수시 미평동 700-4 301호. (만성로95)</a></span>
               </li>
               <li>
                 <span>
