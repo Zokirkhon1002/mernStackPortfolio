@@ -170,7 +170,7 @@
 
 @media (max-width: 991px) {
     .contact_main {
-        padding: 50px;
+        padding: 50px 10px;
     }
     .contact_container {
         flex-direction: column;

@@ -22,11 +22,8 @@ const Footer = () => {
           <div className="sec aboutus">
             <h2>About Me</h2>
             <p>
-              My name is Zokirkhon and I'm 23 years old. I've learned html, css,
-              sass, bootstrap, JavaScript, ReactJS, Redux toolkit, NodeJs and
-              Python. Currenly I'm doing some practices with MERN Stack. I
-              didn't stop to learn, now I'm learning Nodejs in advanced level
-              and Algorithms && Data structures
+              My name is Zokirkhon and I'm 23 years old. I'm full-stack Developer<br />
+              You can contact with me:
             </p>
             <ul className="sci">
               <li>
@@ -95,7 +92,7 @@ const Footer = () => {
             <h2>Contact Info</h2>
             <div className="divForMap">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.3456064315019!2d127.70578671713633!3d34.77114675684713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356ddf43a724f847%3A0xdd499ca2846a04cd!2zKOycoO2VnCnssq3shpTqsbTquLA!5e0!3m2!1suz!2skr!4v1650685608704!5m2!1suz!2skr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.3880717236757!2d127.70181811548854!3d34.77100458695686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356ddf424100e28b%3A0xc53f550b37e315af!2s703-6%20Mipyeong-dong%2C%20Yeosu%2C%20Jeollanam-do!5e0!3m2!1suz!2skr!4v1654487360293!5m2!1suz!2skr"
               className="info map"
               style={{border: 'none', margin: '10px'}}
               allowfullscreen=""
@@ -108,7 +105,7 @@ const Footer = () => {
                 <span>
                   <BiMap />
                 </span>
-                <span><a target="_blank" rel="noreferrer" href="http://kko.to/NLtBiO4yT">전남 여수시 미평동 700-4 301호. (만성로95)</a></span>
+                <span><a target="_blank" rel="noreferrer" href="http://kko.to/Q9xZ98nBL">전남 여수시 양지3길 6 301호.</a></span>
               </li>
               <li>
                 <span>

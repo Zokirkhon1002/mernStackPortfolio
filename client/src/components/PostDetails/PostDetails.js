@@ -26,7 +26,7 @@ const PostDetails = () => {
         getPostsBySearch({ search: "none", tags: post?.tags.join(",") })
       );
     }
-  }, [post]);
+  }, [dispatch, post]);
 
   if (!post) return null;
 
@@ -70,6 +70,7 @@ const PostDetails = () => {
               i.startsWith("https:") ? (
                 <a
                   key={index}
+                  // eslint-disable-next-line react/jsx-no-target-blank
                   target="_blank"
                   href={i}
                   style={{ textDecoration: "none", color: "#3f51b5" }}
@@ -122,7 +123,7 @@ const PostDetails = () => {
             {recommendedPosts.map(
               ({ title, name, message, likes, selectedFile, _id }) => (
                 <div
-                  style={{ margin: "20px", cursor: "pointer" }}
+                  style={{ margin: "20px", cursor: "pointer"}}
                   onClick={() => openPost(_id)}
                   key={_id}
                 >
@@ -133,7 +134,7 @@ const PostDetails = () => {
                     {name}
                   </Typography>
                   <Typography style={{color:"#3f51b594"}} className="wordBreak" gutterBottom variant="subtitle2">
-                    {message}
+                    {message.length < 50 ? message: `${message.slice(0,50)}...`}
                   </Typography>
                   <Typography style={{color: '#3f51b5', fontWeight: 'bold'}} gutterBottom variant="subtitle1">
                     Likes: {likes.length}

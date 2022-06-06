@@ -120,7 +120,7 @@ const Post = ({ post, setCurrentId }) => {
             className="wordBreak"
             gutterBottom
           >
-            {post.message}
+            {post.message.length < 50 ? post.message: `${post.message.slice(0,50)}...`}
           </Typography>
         </CardContent>
       </ButtonBase>

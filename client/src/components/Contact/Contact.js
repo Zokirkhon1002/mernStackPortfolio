@@ -3,6 +3,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BiMap, BiPhoneCall } from "react-icons/bi";
 import "./styles.css";
 import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
   
 
 const Contact = () => {
@@ -24,29 +26,29 @@ const Contact = () => {
         process.env.REACT_APP_PUBLIC
       )
       .then((res) => {
-        alert(
-          "Your Message successfully sent, We will reply as much as earlier. status: "+res.status
-        );
+        toast.success("Your Message successfully sent.",{icon:"✅"})
+        setTimeout(()=>{
+          toast.info("Zokikhon will reply as much as earlier.", { icon: "🚀" });
+        },3000)
         setFormData({name: "",email: "",subject: "",message: "",});
         window.scrollTo(0,0)
       })
-      .catch((err) => {
-        alert(
-          "Your message did not send! error: "+err
-        );
+      .catch(() => {
+        toast.error("Your message did not send!",{icon: "🚫"});
+        toast.info("We will fix some bugs as much as earlier.", { icon: "🚀" });
       });
   };
 
   return (
     <div className="contact_body">
+      < ToastContainer />
       <section className="contact_main">
         <div className="contact_content">
           <h2>Contact Us</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
-            quibusdam aut repudiandae nihil quas. Molestias, nostrum alias
-            repellat cumque nam minus architecto perspiciatis ea nesciunt
-            tempore ut? Porro, ducimus itaque?
+            You can send your messages with below the form.
+            <br />
+            We will reply as much as earlier.
           </p>
         </div>
         <div className="contact_container">

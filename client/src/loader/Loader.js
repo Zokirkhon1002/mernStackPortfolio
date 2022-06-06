@@ -15,21 +15,21 @@ const NewLoader = () => {
           attributeName="cx"
           values="66;50"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
         <animate
           attributeName="cy"
           values="50;66"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
         <animate
           attributeName="fill"
           values="#89b8e0;#1370fc"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
       </circle>
@@ -38,21 +38,21 @@ const NewLoader = () => {
           attributeName="cx"
           values="50;34"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
         <animate
           attributeName="cy"
           values="66;50"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
         <animate
           attributeName="fill"
           values="#1370fc;#89b8e0"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
       </circle>
@@ -61,21 +61,21 @@ const NewLoader = () => {
           attributeName="cx"
           values="34;50"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
         <animate
           attributeName="cy"
           values="50;34"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
         <animate
           attributeName="fill"
           values="#89b8e0;#64f51b"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
       </circle>
@@ -84,21 +84,21 @@ const NewLoader = () => {
           attributeName="cx"
           values="50;66"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
         <animate
           attributeName="cy"
           values="34;49.99999999999999"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
         <animate
           attributeName="fill"
           values="#64f51b;#89b8e0"
           keyTimes="0;1"
-          dur="0.78125s"
+          dur="0.65125s"
           repeatCount="indefinite"
         ></animate>
       </circle>
