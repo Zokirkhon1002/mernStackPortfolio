@@ -15,7 +15,7 @@ dotenv.config();
 
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
-const PORT = process.env.PORT || 4000;
+
 
 mongoose
   .connect(CONNECTION_URL)
@@ -39,7 +39,7 @@ app.use("/posts", postRoutes);
 app.use("/user", userRoutes);
 
 
-
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`server running on port: ${PORT}`);
 });

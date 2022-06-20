@@ -3,7 +3,7 @@
 import React from "react";
 import "./styles.css";
 import me from "../../images/me.png";
-import { FaTableTennis, FaBook, FaBasketballBall} from "react-icons/fa";
+import { FaTableTennis, FaBook, FaBasketballBall } from "react-icons/fa";
 import {
   AiOutlineTwitter,
   AiOutlineMail,
@@ -12,8 +12,12 @@ import {
 import { BsGithub, BsTelegram } from "react-icons/bs";
 import { BiMap, BiPhoneCall } from "react-icons/bi";
 import { SiRedux } from "react-icons/si";
+import Zokirkhon_Kotibkhonov from "../../cv/Zokirkhon_Kotibkhonov.pdf";
 
 const About = () => {
+  const handleclickDownloadCV = () => {
+    window.open(Zokirkhon_Kotibkhonov)
+  }
   return (
     <div className="about_body">
       {/* <h1>About page is coming soon...(MY CV)</h1> */}
@@ -61,9 +65,9 @@ const About = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://mernstack-porfolio-1002.vercel.app/posts"
+                    href="https://zokirkhon.uz/posts"
                   >
-                    mernstack-porfolio-1002
+                    Zokirkhon.uz
                   </a>
                 </span>
               </li>
@@ -361,6 +365,13 @@ const About = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="btnBox">
+        <a href={Zokirkhon_Kotibkhonov} download="Zokirkhon_Kotibkhonov.pdf" onClick={handleclickDownloadCV}>
+          <button class="buttonForDownload" style={{ verticalAlign: "middle" }}>
+            <span>Download </span>
+          </button>
+        </a>
       </div>
     </div>
   );

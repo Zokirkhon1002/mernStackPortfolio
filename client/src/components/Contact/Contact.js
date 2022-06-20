@@ -60,8 +60,8 @@ const Contact = () => {
               <div className="contact_info_box_text">
                 <h2>Address</h2>
                 <p>
-                  <a target="_blank" rel="noreferrer" href="http://kko.to/NLtBiO4yT">
-                    전남 여수시 미평동 700-4 301호. (만성로95)
+                  <a target="_blank" rel="noreferrer" href="http://kko.to/Q9xZ98nBL">
+                  전남 여수시 양지3길 6 301호.
                   </a>
                 </p>
               </div>

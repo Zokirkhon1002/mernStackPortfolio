@@ -75,8 +75,14 @@ footer .footer_container .sec.aboutus p {
 }
 
 .sci {
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
+
+}
+
+.buyMeCoffee {
+    height: 60px;
+    width: 217px;
 
 }
 
@@ -270,4 +276,10 @@ footer .footer_container .sec.aboutus p {
         margin: 8px;
     }
 
+}
+@media (max-width: 350px){
+    .buyMeCoffee {
+        width: 150px;
+        height: 40px;
+    }
 }

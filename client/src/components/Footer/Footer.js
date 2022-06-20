@@ -22,47 +22,77 @@ const Footer = () => {
           <div className="sec aboutus">
             <h2>About Me</h2>
             <p>
-              My name is Zokirkhon and I'm 23 years old. I'm full-stack Developer<br />
+              My name is Zokirkhon and I'm 23 years old. I'm full-stack
+              Developer
+              <br />
               You can contact with me:
             </p>
             <ul className="sci">
               <li>
-                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/Zokirkhan102">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.facebook.com/Zokirkhan102"
+                >
                   <FaFacebookF className="FaFacebookF" />
                 </a>
               </li>
               <li>
-                <a target="_blank" rel="noreferrer" href="https://twitter.com/Zokirkhan1">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://twitter.com/Zokirkhan1"
+                >
                   <AiOutlineTwitter className="AiOutlineTwitter" />
                 </a>
               </li>
               <li>
                 <a
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                   href="https://www.instagram.com/zokirkhan1002/"
                 >
                   <BsInstagram className="BsInstagram" />
                 </a>
               </li>
               <li>
-                <a target="_blank" rel="noreferrer" href="https://t.me/Zokirkhann1002">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://t.me/Zokirkhann1002"
+                >
                   <BsTelegram className="BsTelegram" />
                 </a>
               </li>
               <li>
                 <a
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                   href="https://www.linkedin.com/in/zokirkhon-kotibkhonov-2997b1202/"
                 >
                   <AiFillLinkedin className="AiFillLinkedin" />
                 </a>
               </li>
               <li>
-                <a target="_blank" rel="noreferrer" href="https://github.com/Zokirkhon1002">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/Zokirkhon1002"
+                >
                   <BsGithub className="BsGithub" />
                 </a>
               </li>
             </ul>
+
+            <a href="https://www.buymeacoffee.com/zokirkhon" target="_blank">
+              <img
+                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                width={217}
+                height={60}
+                alt="Buy Me A Coffee"
+                className="buyMeCoffee"
+              />
+            </a>
           </div>
           <div className="sec quickLinks">
             <h2>Quick Links</h2>
@@ -71,14 +101,22 @@ const Footer = () => {
                 <Link to="about">About</Link>
               </li>
               <li>
-                {
-                  (location.pathname === '/posts') ? (<Link to="/" onClick={() => window.scrollTo(0,0)} >Home</Link>) : (<Link to="/">Home</Link>)
-                }
+                {location.pathname === "/posts" ? (
+                  <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                    Home
+                  </Link>
+                ) : (
+                  <Link to="/">Home</Link>
+                )}
               </li>
               <li>
-              {
-                  (location.pathname === '/posts') ? (<Link to="/" onClick={() => window.scrollTo(0,0)} >Create a Post</Link>) : (<Link to="/">Create a Post</Link>)
-                }
+                {location.pathname === "/posts" ? (
+                  <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                    Create a Post
+                  </Link>
+                ) : (
+                  <Link to="/">Create a Post</Link>
+                )}
               </li>
               <li>
                 <Link to="/help">Help</Link>
@@ -91,21 +129,29 @@ const Footer = () => {
           <div className="sec contact">
             <h2>Contact Info</h2>
             <div className="divForMap">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.3880717236757!2d127.70181811548854!3d34.77100458695686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356ddf424100e28b%3A0xc53f550b37e315af!2s703-6%20Mipyeong-dong%2C%20Yeosu%2C%20Jeollanam-do!5e0!3m2!1suz!2skr!4v1654487360293!5m2!1suz!2skr"
-              className="info map"
-              style={{border: 'none', margin: '10px'}}
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.3880717236757!2d127.70181811548854!3d34.77100458695686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356ddf424100e28b%3A0xc53f550b37e315af!2s703-6%20Mipyeong-dong%2C%20Yeosu%2C%20Jeollanam-do!5e0!3m2!1suz!2skr!4v1654487360293!5m2!1suz!2skr"
+                className="info map"
+                style={{ border: "none", margin: "10px" }}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
             <ul className="info">
               <li>
                 <span>
                   <BiMap />
                 </span>
-                <span><a target="_blank" rel="noreferrer" href="http://kko.to/Q9xZ98nBL">전남 여수시 양지3길 6 301호.</a></span>
+                <span>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="http://kko.to/Q9xZ98nBL"
+                  >
+                    전남 여수시 양지3길 6 301호.
+                  </a>
+                </span>
               </li>
               <li>
                 <span>
