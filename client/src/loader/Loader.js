@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React from "react";
 
 const NewLoader = () => {
   return (

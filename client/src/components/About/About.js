@@ -16,8 +16,9 @@ import Zokirkhon_Kotibkhonov from "../../cv/Zokirkhon_Kotibkhonov.pdf";
 
 const About = () => {
   const handleclickDownloadCV = () => {
-    window.open(Zokirkhon_Kotibkhonov)
-  }
+    window.open(Zokirkhon_Kotibkhonov);
+  };
+  document.title = "About";
   return (
     <div className="about_body">
       {/* <h1>About page is coming soon...(MY CV)</h1> */}
@@ -367,7 +368,11 @@ const About = () => {
         </div>
       </div>
       <div className="btnBox">
-        <a href={Zokirkhon_Kotibkhonov} download="Zokirkhon_Kotibkhonov.pdf" onClick={handleclickDownloadCV}>
+        <a
+          href={Zokirkhon_Kotibkhonov}
+          download="Zokirkhon_Kotibkhonov.pdf"
+          onClick={handleclickDownloadCV}
+        >
           <button class="buttonForDownload" style={{ verticalAlign: "middle" }}>
             <span>Download </span>
           </button>

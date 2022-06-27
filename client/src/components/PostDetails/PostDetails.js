@@ -15,6 +15,7 @@ const PostDetails = () => {
   const history = useHistory();
   const classes = useStyles();
   const { id } = useParams();
+  
 
   useEffect(() => {
     dispatch(getPost(id));
@@ -41,6 +42,8 @@ const PostDetails = () => {
   }
 
   const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
+
+  document.title = `Post details | ${post.title}`
 
   return (
     <Paper style={{ padding: "20px", borderRadius: "15px" }} elevation={6}>

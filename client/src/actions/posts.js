@@ -9,41 +9,40 @@ import {
   END_LOADING,
   FETCH_POST,
   COMMENT,
-  FETCH_BY_CREATOR
+  FETCH_BY_CREATOR,
 } from "../constants/actionTypes";
 import * as api from "../api/index.js";
 
 export const getPosts = (page) => async (dispatch) => {
   try {
-    dispatch({ type: START_LOADING })
+    dispatch({ type: START_LOADING });
     const { data } = await api.fetchPosts(page);
 
     dispatch({ type: FETCH_ALL, payload: data });
-    dispatch({ type: END_LOADING })
+    dispatch({ type: END_LOADING });
   } catch (err) {
     console.log(err);
   }
 };
 
-
 export const getPost = (id) => async (dispatch) => {
   try {
-    dispatch({ type: START_LOADING })
+    dispatch({ type: START_LOADING });
     const { data } = await api.fetchPost(id);
 
     dispatch({ type: FETCH_POST, payload: data });
-    dispatch({ type: END_LOADING })
+    dispatch({ type: END_LOADING });
   } catch (err) {
     console.log(err.response.data);
   }
 };
 
-
-
 export const getPostsByCreator = (name) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-    const { data: { data } } = await api.fetchPostsByCreator(name);
+    const {
+      data: { data },
+    } = await api.fetchPostsByCreator(name);
 
     dispatch({ type: FETCH_BY_CREATOR, payload: { data } });
     dispatch({ type: END_LOADING });
@@ -52,16 +51,15 @@ export const getPostsByCreator = (name) => async (dispatch) => {
   }
 };
 
-
-export const createPost = (post,history) => async (dispatch) => {
+export const createPost = (post, history) => async (dispatch) => {
   try {
-    dispatch({ type: START_LOADING })
+    dispatch({ type: START_LOADING });
     const { data } = await api.createPost(post);
 
-    history.push(`/posts/${data._id}`)
+    history.push(`/posts/${data._id}`);
 
     dispatch({ type: CREATE, payload: data });
-    dispatch({ type: END_LOADING })
+    dispatch({ type: END_LOADING });
   } catch (err) {
     console.log(err.response.data);
   }
@@ -99,28 +97,26 @@ export const deletePost = (id) => async (dispatch) => {
 
 export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   try {
-    dispatch({ type: START_LOADING })
+    dispatch({ type: START_LOADING });
     const {
       data: { data },
     } = await api.fetchPostsBySearch(searchQuery);
 
     dispatch({ type: FETCH_BY_SEARCH, payload: data });
-    dispatch({ type: END_LOADING })
+    dispatch({ type: END_LOADING });
   } catch (err) {
     console.log(err);
   }
 };
 
-
-
-export const commentPost = (value,id)=> async (dispatch) => {
+export const commentPost = (value, id) => async (dispatch) => {
   try {
-    const {data} = await api.comment(value,id)
-    
-    dispatch({ type: COMMENT, payload: data})
+    const { data } = await api.comment(value, id);
+
+    dispatch({ type: COMMENT, payload: data });
 
     return data.comments;
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
-}
+};

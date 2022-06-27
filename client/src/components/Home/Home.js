@@ -60,6 +60,7 @@ const Home = () => {
       dispatch(
         getPostsBySearch({ search: searchValue, tags: searchTags.join(",") })
       );
+
       history.push(
         `/posts/search?searchQuery=${
           searchValue || "none"
@@ -69,6 +70,8 @@ const Home = () => {
       history.push("/");
     }
   };
+
+  document.title = "Social Posts";
 
   return (
     <Grow in>

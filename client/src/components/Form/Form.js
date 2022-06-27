@@ -42,8 +42,7 @@ const Form = ({ currentId, setCurrentId }) => {
         updatePost(currentId, { ...postData, name: user?.result?.name })
       );
     } else {
-      dispatch(createPost({ ...postData, name: user?.result?.name },history));
-      
+      dispatch(createPost({ ...postData, name: user?.result?.name }, history));
     }
     handleClear();
   };
@@ -53,8 +52,8 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
       <Paper className={classes.paper} elevation={6}>
         <Typography variant="h6" align="center">
-          Please Sign in to create your own posts, like other's posts or
-          write comments.
+          Please Sign in to create your own posts, like other's posts or write
+          comments.
         </Typography>
       </Paper>
     );

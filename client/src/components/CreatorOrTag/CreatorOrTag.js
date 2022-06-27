@@ -14,6 +14,7 @@ const CreatorOrTag = () => {
 
   const location = useLocation();
 
+  document.title = `Posts | ${name}`;
 
   useEffect(() => {
     if (location.pathname.startsWith("/tags")) {

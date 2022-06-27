@@ -31,17 +31,16 @@ const CommentSection = ({ post }) => {
     setComment("");
 
     commentsRef.current.scrollIntoView({
-            block: "end",
-            behavior: "smooth",
-          });
-
+      block: "end",
+      behavior: "smooth",
+    });
   };
 
   const ctrlPlusEnter = (e) => {
-    if(e.ctrlKey && e.keyCode === 13){
+    if (e.ctrlKey && e.keyCode === 13) {
       handleSubmitComment();
     }
-  }
+  };
 
   return (
     <div>
@@ -60,8 +59,8 @@ const CommentSection = ({ post }) => {
               gutterBottom
               variant="subtitle1"
             >
-              <strong>{c.split(': ')[0]}</strong>
-              {c.split(':')[1]}
+              <strong>{c.split(": ")[0]}</strong>
+              {c.split(":")[1]}
             </Typography>
           ))}
         </div>

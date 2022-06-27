@@ -105,7 +105,7 @@ const Post = ({ post, setCurrentId }) => {
           </div>
         )}
         <div className={classes.details}>
-          <Typography variant="body2" style={{color:"#3f51b594"}}>
+          <Typography variant="body2" style={{ color: "#3f51b594" }}>
             {post.tags.map((tag) => `#${tag.trim()} `)}
           </Typography>
         </div>
@@ -114,13 +114,15 @@ const Post = ({ post, setCurrentId }) => {
         </Typography>
         <CardContent>
           <Typography
-            style={{color:"#3f51b594"}}
+            style={{ color: "#3f51b594" }}
             variant="body2"
             component="p"
             className="wordBreak"
             gutterBottom
           >
-            {post.message.length < 50 ? post.message: `${post.message.slice(0,50)}...`}
+            {post.message.length < 50
+              ? post.message
+              : `${post.message.slice(0, 50)}...`}
           </Typography>
         </CardContent>
       </ButtonBase>

@@ -1,60 +1,59 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   media: {
-    display: 'flex',
-    borderRadius: '20px',
-    objectFit: 'cover',
-    width: '100%',
-    maxHeight: '600px',
-    paddingLeft: '10px',
-
+    display: "flex",
+    borderRadius: "20px",
+    objectFit: "cover",
+    width: "100%",
+    maxHeight: "600px",
+    paddingLeft: "10px",
   },
   card: {
-    display: 'flex',
-    width: '100%',
-    [theme.breakpoints.down('sm')]: {
-      flexWrap: 'wrap',
-      flexDirection: 'column',
+    display: "flex",
+    width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      flexWrap: "wrap",
+      flexDirection: "column",
     },
   },
   section: {
-    borderRadius: '20px',
-    margin: '10px',
+    borderRadius: "20px",
+    margin: "10px",
     flex: 1,
   },
   imageSection: {
-    width: '60%',
-    marginLeft: '20px',
-    [theme.breakpoints.down('sm')]: {
+    width: "60%",
+    marginLeft: "20px",
+    [theme.breakpoints.down("sm")]: {
       marginLeft: 0,
-      width: '100%',
+      width: "100%",
     },
   },
   recommendedPosts: {
-    display: 'flex',
-    width: '100%',
-    flexWrap: 'wrap',
-    WebkitFlexWrap: 'wrap',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
+    display: "flex",
+    width: "100%",
+    flexWrap: "wrap",
+    WebkitFlexWrap: "wrap",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
     },
   },
   loadingPaper: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '20px',
-    borderRadius: '15px',
-    height: '39vh',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "20px",
+    borderRadius: "15px",
+    height: "39vh",
   },
   commentsOuterContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: "flex",
+    justifyContent: "space-between",
   },
   commentsInnerContainer: {
-    height: '200px',
-    overflowY: 'auto',
-    marginRight: '30px',
+    height: "200px",
+    overflowY: "auto",
+    marginRight: "30px",
   },
 }));

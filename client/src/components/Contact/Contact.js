@@ -5,7 +5,6 @@ import "./styles.css";
 import emailjs from "emailjs-com";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-  
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,22 +25,23 @@ const Contact = () => {
         process.env.REACT_APP_PUBLIC
       )
       .then((res) => {
-        toast.success("Your Message successfully sent.",{icon:"✅"})
-        setTimeout(()=>{
+        toast.success("Your Message successfully sent.", { icon: "✅" });
+        setTimeout(() => {
           toast.info("Zokikhon will reply as much as earlier.", { icon: "🚀" });
-        },3000)
-        setFormData({name: "",email: "",subject: "",message: "",});
-        window.scrollTo(0,0)
+        }, 3000);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        window.scrollTo(0, 0);
       })
       .catch(() => {
-        toast.error("Your message did not send!",{icon: "🚫"});
+        toast.error("Your message did not send!", { icon: "🚫" });
         toast.info("We will fix some bugs as much as earlier.", { icon: "🚀" });
       });
   };
 
+  document.title = "Contact";
   return (
     <div className="contact_body">
-      < ToastContainer />
+      <ToastContainer />
       <section className="contact_main">
         <div className="contact_content">
           <h2>Contact Us</h2>
@@ -60,8 +60,12 @@ const Contact = () => {
               <div className="contact_info_box_text">
                 <h2>Address</h2>
                 <p>
-                  <a target="_blank" rel="noreferrer" href="http://kko.to/Q9xZ98nBL">
-                  전남 여수시 양지3길 6 301호.
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="http://kko.to/Q9xZ98nBL"
+                  >
+                    전남 여수시 양지3길 6 301호.
                   </a>
                 </p>
               </div>

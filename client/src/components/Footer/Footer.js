@@ -84,15 +84,7 @@ const Footer = () => {
               </li>
             </ul>
 
-            <a href="https://www.buymeacoffee.com/zokirkhon" target="_blank">
-              <img
-                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                width={217}
-                height={60}
-                alt="Buy Me A Coffee"
-                className="buyMeCoffee"
-              />
-            </a>
+            
           </div>
           <div className="sec quickLinks">
             <h2>Quick Links</h2>

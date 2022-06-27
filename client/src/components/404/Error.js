@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 
 const Error = () => {
   const history = useHistory();
+  document.title = "Error 404";
 
   setTimeout(() => {
     history.goBack();

@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-import React, { useState,  } from "react";
+import React, { useState } from "react";
 import {
   Avatar,
   Button,
@@ -13,29 +13,26 @@ import useStyles from "./styles";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Input from "./Input";
 import Icon from "./Icon";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { AUTH } from "../../constants/actionTypes";
 import { useHistory } from "react-router-dom";
 import { signin, signup } from "../../actions/auth";
 
-
 const initialState = {
-  firstName:"",
-  lastName:"",
-  email:"",
-  password:"",
-  confirmPassword:""
-}
-
-
+  firstName: "",
+  lastName: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+};
 
 const Auth = () => {
   const classes = useStyles();
-  const [errMsg,setErrMsg] = useState("")
+  const [errMsg, setErrMsg] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
-  const [formData, setFormData] = useState(initialState)
-  const dispatch = useDispatch()
+  const [formData, setFormData] = useState(initialState);
+  const dispatch = useDispatch();
   const history = useHistory();
 
   const handleShowPassword = () => {
@@ -44,24 +41,22 @@ const Auth = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (isSignUp) {
       // signup
-      dispatch(signup(formData, history))
+      dispatch(signup(formData, history));
     } else {
       // signin
-      dispatch(signin(formData, history))
+      dispatch(signin(formData, history));
     }
-
-
   };
 
   const handleChange = (e) => {
-    setFormData({...formData,[e.target.name]:e.target.value})
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSwitchMode = () => {
-    setFormData(initialState)
+    setFormData(initialState);
     setIsSignUp((prev) => !prev);
     setShowPassword(false);
   };
@@ -71,11 +66,11 @@ const Auth = () => {
     const token = res?.tokenId;
 
     try {
-      dispatch({type: AUTH, data: {result, token}})
-      history.push("/")
-      setErrMsg("")
+      dispatch({ type: AUTH, data: { result, token } });
+      history.push("/");
+      setErrMsg("");
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
   };
 
@@ -84,6 +79,8 @@ const Auth = () => {
     console.log("Google Sign In was unsuccessfully. Try Again Later");
     console.log(err);
   };
+
+  document.title = isSignUp ? "Auth | Sign Up" : "Auth | Sign In";
 
   return (
     <Container component="main" maxWidth="xs">
@@ -94,9 +91,11 @@ const Auth = () => {
         <Typography variant="h5">Sign {isSignUp ? "Up" : "In"}</Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
-            {!!errMsg.length && <Paper className={classes.errMsg}  elevation={3}>
-            {errMsg}
-            </Paper>}
+            {!!errMsg.length && (
+              <Paper className={classes.errMsg} elevation={3}>
+                {errMsg}
+              </Paper>
+            )}
             {isSignUp && (
               <>
                 <Input

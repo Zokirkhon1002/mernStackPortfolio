@@ -15,7 +15,6 @@ const Navbar = () => {
   const location = useLocation();
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
-
   const handleLogout = () => {
     dispatch({ type: LOGOUT });
     history.push("/");
@@ -37,11 +36,11 @@ const Navbar = () => {
     }
 
     setUser(JSON.parse(localStorage.getItem("profile")));
-  }, [location,dispatch]);
+  }, [location, dispatch]);
 
   useEffect(() => {
-    window.scrollTo(0,0)
-  }, [location.pathname])
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <div className={classes.brandContainer}>
